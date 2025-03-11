@@ -184,6 +184,9 @@
   }
 }
 @layer utilities {
+  .fixed {
+    position: fixed;
+  }
   .col-span-3 {
     grid-column: span 3 / span 3;
   }
