@@ -1304,6 +1304,11 @@
       --tw-ring-inset: inset;
     }
   }
+  .sm\:visible {
+    @media (width >= 40rem) {
+      visibility: visible;
+    }
+  }
   .sm\:static {
     @media (width >= 40rem) {
       position: static;
@@ -1312,6 +1317,11 @@
   .sm\:inset-auto {
     @media (width >= 40rem) {
       inset: auto;
+    }
+  }
+  .sm\:-mt-10 {
+    @media (width >= 40rem) {
+      margin-top: calc(var(--spacing) * -10);
     }
   }
   .sm\:ml-6 {
@@ -1329,9 +1339,35 @@
       display: none;
     }
   }
+  .sm\:size-30 {
+    @media (width >= 40rem) {
+      width: calc(var(--spacing) * 30);
+      height: calc(var(--spacing) * 30);
+    }
+  }
+  .sm\:w-10 {
+    @media (width >= 40rem) {
+      width: calc(var(--spacing) * 10);
+    }
+  }
+  .sm\:w-20 {
+    @media (width >= 40rem) {
+      width: calc(var(--spacing) * 20);
+    }
+  }
+  .sm\:w-30 {
+    @media (width >= 40rem) {
+      width: calc(var(--spacing) * 30);
+    }
+  }
   .sm\:items-stretch {
     @media (width >= 40rem) {
       align-items: stretch;
+    }
+  }
+  .sm\:justify-between {
+    @media (width >= 40rem) {
+      justify-content: space-between;
     }
   }
   .sm\:justify-start {
@@ -1371,6 +1407,17 @@
       line-height: var(--tw-leading, var(--text-3xl--line-height));
     }
   }
+  .sm\:text-lg {
+    @media (width >= 40rem) {
+      font-size: var(--text-lg);
+      line-height: var(--tw-leading, var(--text-lg--line-height));
+    }
+  }
+  .md\:visible {
+    @media (width >= 48rem) {
+      visibility: visible;
+    }
+  }
   .md\:col-span-3 {
     @media (width >= 48rem) {
       grid-column: span 3 / span 3;
@@ -1379,6 +1426,11 @@
   .md\:col-span-4 {
     @media (width >= 48rem) {
       grid-column: span 4 / span 4;
+    }
+  }
+  .md\:-mt-10 {
+    @media (width >= 48rem) {
+      margin-top: calc(var(--spacing) * -10);
     }
   }
   .md\:mb-0 {
@@ -1396,9 +1448,20 @@
       display: none;
     }
   }
+  .md\:size-30 {
+    @media (width >= 48rem) {
+      width: calc(var(--spacing) * 30);
+      height: calc(var(--spacing) * 30);
+    }
+  }
   .md\:w-1\/4 {
     @media (width >= 48rem) {
       width: calc(1/4 * 100%);
+    }
+  }
+  .md\:w-30 {
+    @media (width >= 48rem) {
+      width: calc(var(--spacing) * 30);
     }
   }
   .md\:w-full {
@@ -1414,6 +1477,11 @@
   .md\:columns-2 {
     @media (width >= 48rem) {
       columns: 2;
+    }
+  }
+  .md\:justify-between {
+    @media (width >= 48rem) {
+      justify-content: space-between;
     }
   }
   .md\:p-20 {
@@ -1455,9 +1523,35 @@
       line-height: var(--tw-leading, var(--text-lg--line-height));
     }
   }
+  .lg\:visible {
+    @media (width >= 64rem) {
+      visibility: visible;
+    }
+  }
+  .lg\:-mt-10 {
+    @media (width >= 64rem) {
+      margin-top: calc(var(--spacing) * -10);
+    }
+  }
+  .lg\:size-30 {
+    @media (width >= 64rem) {
+      width: calc(var(--spacing) * 30);
+      height: calc(var(--spacing) * 30);
+    }
+  }
+  .lg\:w-30 {
+    @media (width >= 64rem) {
+      width: calc(var(--spacing) * 30);
+    }
+  }
   .lg\:columns-3 {
     @media (width >= 64rem) {
       columns: 3;
+    }
+  }
+  .lg\:justify-between {
+    @media (width >= 64rem) {
+      justify-content: space-between;
     }
   }
   .lg\:p-20 {
@@ -1509,9 +1603,46 @@
       line-height: var(--tw-leading, var(--text-lg--line-height));
     }
   }
+  .xl\:visible {
+    @media (width >= 80rem) {
+      visibility: visible;
+    }
+  }
+  .xl\:-mt-5 {
+    @media (width >= 80rem) {
+      margin-top: calc(var(--spacing) * -5);
+    }
+  }
+  .xl\:-mt-10 {
+    @media (width >= 80rem) {
+      margin-top: calc(var(--spacing) * -10);
+    }
+  }
+  .xl\:-mt-15 {
+    @media (width >= 80rem) {
+      margin-top: calc(var(--spacing) * -15);
+    }
+  }
+  .xl\:size-30 {
+    @media (width >= 80rem) {
+      width: calc(var(--spacing) * 30);
+      height: calc(var(--spacing) * 30);
+    }
+  }
+  .xl\:size-40 {
+    @media (width >= 80rem) {
+      width: calc(var(--spacing) * 40);
+      height: calc(var(--spacing) * 40);
+    }
+  }
   .xl\:w-10 {
     @media (width >= 80rem) {
       width: calc(var(--spacing) * 10);
+    }
+  }
+  .xl\:w-30 {
+    @media (width >= 80rem) {
+      width: calc(var(--spacing) * 30);
     }
   }
   .xl\:w-40 {
@@ -1547,6 +1678,11 @@
   .xl\:w-200 {
     @media (width >= 80rem) {
       width: calc(var(--spacing) * 200);
+    }
+  }
+  .xl\:justify-between {
+    @media (width >= 80rem) {
+      justify-content: space-between;
     }
   }
   .xl\:p-20 {
