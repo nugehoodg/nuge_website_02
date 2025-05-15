@@ -1,160 +1,133 @@
-<!DOCTYPE html>
-<html lang="en">
-    <head>
-        <meta charset="UTF-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <link href="src/output.css" rel="stylesheet">
-        <script src="https://cdn.tailwindcss.com"></script>
-        <title>Anugerah Portfolio</title>
-        <script>
-            window.va = window.va || function () { (window.vaq = window.vaq || []).push(arguments); };
-          </script>
-          <script defer src="/_vercel/insights/script.js"></script>
-          <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
-          <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
-          <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
-          <link rel="manifest" href="/site.webmanifest">
-    </head>
-    <body class="bg-orange-100">
-        <!-- Navbar -->
-        <nav class="">
-            <div class="container mx-auto p-10">
-                <div class="flex justify-between items-center h-16">
-                    <!-- Left Links (Hidden on Mobile) -->
-                    <div class="hidden md:flex space-x-4 md:text-lg lg:text-lg xl:text-lg text-sm">
-                        <a href="/about.html" class=" hover:text-gray-900">ABOUT</a>
-                        <a href="/contact.html" class=" hover:text-gray-900">CONTACT</a>
-                    </div>
-    
-                    <!-- Middle Icon -->
-                    <div class="flex-shrink-0">
-                        <a href="#" class="text-2xl font-bold text-gray-900"><img class="size-40 mt-10" src="src/logo.png" alt="" srcset=""></a>
-                    </div>
-    
-                    <!-- Right Links (Hidden on Mobile) -->
-                    <div class="hidden md:flex space-x-4 md:text-lg lg:text-lg xl:text-lg text-sm">
-                        <a target="_blank" href="https://www.instagram.com/brief.look/"><svg class="size-7" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><!--!Font Awesome Free 6.7.2 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free Copyright 2025 Fonticons, Inc.--><path d="M194.4 211.7a53.3 53.3 0 1 0 59.3 88.7 53.3 53.3 0 1 0 -59.3-88.7zm142.3-68.4c-5.2-5.2-11.5-9.3-18.4-12c-18.1-7.1-57.6-6.8-83.1-6.5c-4.1 0-7.9 .1-11.2 .1c-3.3 0-7.2 0-11.4-.1c-25.5-.3-64.8-.7-82.9 6.5c-6.9 2.7-13.1 6.8-18.4 12s-9.3 11.5-12 18.4c-7.1 18.1-6.7 57.7-6.5 83.2c0 4.1 .1 7.9 .1 11.1s0 7-.1 11.1c-.2 25.5-.6 65.1 6.5 83.2c2.7 6.9 6.8 13.1 12 18.4s11.5 9.3 18.4 12c18.1 7.1 57.6 6.8 83.1 6.5c4.1 0 7.9-.1 11.2-.1c3.3 0 7.2 0 11.4 .1c25.5 .3 64.8 .7 82.9-6.5c6.9-2.7 13.1-6.8 18.4-12s9.3-11.5 12-18.4c7.2-18 6.8-57.4 6.5-83c0-4.2-.1-8.1-.1-11.4s0-7.1 .1-11.4c.3-25.5 .7-64.9-6.5-83l0 0c-2.7-6.9-6.8-13.1-12-18.4zm-67.1 44.5A82 82 0 1 1 178.4 324.2a82 82 0 1 1 91.1-136.4zm29.2-1.3c-3.1-2.1-5.6-5.1-7.1-8.6s-1.8-7.3-1.1-11.1s2.6-7.1 5.2-9.8s6.1-4.5 9.8-5.2s7.6-.4 11.1 1.1s6.5 3.9 8.6 7s3.2 6.8 3.2 10.6c0 2.5-.5 5-1.4 7.3s-2.4 4.4-4.1 6.2s-3.9 3.2-6.2 4.2s-4.8 1.5-7.3 1.5l0 0c-3.8 0-7.5-1.1-10.6-3.2zM448 96c0-35.3-28.7-64-64-64H64C28.7 32 0 60.7 0 96V416c0 35.3 28.7 64 64 64H384c35.3 0 64-28.7 64-64V96zM357 389c-18.7 18.7-41.4 24.6-67 25.9c-26.4 1.5-105.6 1.5-132 0c-25.6-1.3-48.3-7.2-67-25.9s-24.6-41.4-25.8-67c-1.5-26.4-1.5-105.6 0-132c1.3-25.6 7.1-48.3 25.8-67s41.5-24.6 67-25.8c26.4-1.5 105.6-1.5 132 0c25.6 1.3 48.3 7.1 67 25.8s24.6 41.4 25.8 67c1.5 26.3 1.5 105.4 0 131.9c-1.3 25.6-7.1 48.3-25.8 67z"/></svg></a>
-                        <a target="_blank" href="https://bsky.app/profile/anugerah.bsky.social"><svg class="size-7" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><!--!Font Awesome Free 6.7.2 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free Copyright 2025 Fonticons, Inc.--><path d="M64 32C28.7 32 0 60.7 0 96L0 416c0 35.3 28.7 64 64 64l320 0c35.3 0 64-28.7 64-64l0-320c0-35.3-28.7-64-64-64L64 32zM224 247.4c14.5-30 54-85.8 90.7-113.3c26.5-19.9 69.3-35.2 69.3 13.7c0 9.8-5.6 82.1-8.9 93.8c-11.4 40.8-53 51.2-90 44.9c64.7 11 81.2 47.5 45.6 84c-67.5 69.3-97-17.4-104.6-39.6c0 0 0 0 0 0l-.3-.9c-.9-2.6-1.4-4.1-1.8-4.1s-.9 1.5-1.8 4.1c-.1 .3-.2 .6-.3 .9c0 0 0 0 0 0c-7.6 22.2-37.1 108.8-104.6 39.6c-35.5-36.5-19.1-73 45.6-84c-37 6.3-78.6-4.1-90-44.9c-3.3-11.7-8.9-84-8.9-93.8c0-48.9 42.9-33.5 69.3-13.7c36.7 27.5 76.2 83.4 90.7 113.3z"/></svg></a>
-                        <a target="_blank" href="https://www.linkedin.com/in/anugerah-maulana/"><svg class="size-7" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><!--!Font Awesome Free 6.7.2 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free Copyright 2025 Fonticons, Inc.--><path d="M416 32H31.9C14.3 32 0 46.5 0 64.3v383.4C0 465.5 14.3 480 31.9 480H416c17.6 0 32-14.5 32-32.3V64.3c0-17.8-14.4-32.3-32-32.3zM135.4 416H69V202.2h66.5V416zm-33.2-243c-21.3 0-38.5-17.3-38.5-38.5S80.9 96 102.2 96c21.2 0 38.5 17.3 38.5 38.5 0 21.3-17.2 38.5-38.5 38.5zm282.1 243h-66.4V312c0-24.8-.5-56.7-34.5-56.7-34.6 0-39.9 27-39.9 54.9V416h-66.4V202.2h63.7v29.2h.9c8.9-16.8 30.6-34.5 62.9-34.5 67.2 0 79.7 44.3 79.7 101.9V416z"/></svg></a>
-                        
-                    </div>
-    
-                    <!-- Burger Menu (Visible on Mobile) -->
-                    <div class="md:hidden">
-                        <button id="burger-button" class="text-gray-700 hover:text-gray-900 focus:outline-none">
-                            <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
-                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16m-7 6h7"></path>
-                            </svg>
-                        </button>
-                    </div>
+<!doctype html>
+<html class="scroll-smooth">
+<head>
+  <title>Anugerah</title>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link href="src/output.css" rel="stylesheet">
+  <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
+  <link rel="manifest" href="/site.webmanifest">
+</head>
+<body class="bg-orange-50" onLoad="preLoad()">
+    <div class="navbar justify-center p-7">
+        <a href=""><img class="w-60 animate-jelly" src="img/wewus.webp"></a>
+    </div>
+   
+
+      <div class="md:grid grid-cols-1 md:grid-cols-2 w-full flex-row md:w-3xl lg:w-4xl xl:w-4xl p-10 mx-auto min-h-full space-y-4 font-mono">
+            <div class="animate-fade-in-left col-span-1 font-bold text-4xl md:text-5xl">Anugerah</div>
+            <div class="animate-fade-in-right col-span-2 text-md md:text-xl text-justify">Passionate graphic designer and video editor with 7+ years of experience creating visually compelling content that resonates with audiences. From designing Instagram posters that attract hundreds of engagements to producing videos with over 8,000 views, I thrive on turning creative ideas into impactful visuals.</div>
+            <div class="md:col-span-2 flex gap-5 animate-fade-in-down">
+                <div class="tooltip" data-tip="hello">
+                    <div class="font-bold italic text-sm">Graphic Designer</div>
                 </div>
+                <div class="font-bold italic text-sm">Video Editor</div>
+                <div class="font-bold italic text-sm">Content Writer</div>
+                <div class="font-bold italic text-sm">Website Designer</div>
             </div>
-    
-            <!-- Mobile Menu (Hidden by Default) -->
-            <div id="mobile-menu" class="md:hidden hidden">
-                <div class="px-10 pt-5 pb-3 space-y-1 text-right">
-                    <a href="/about.html" class="block text-gray-700 hover:text-gray-900">About</a>
-                    <a href="/contact.html" class="block text-gray-700 hover:text-gray-900">Contact</a>
-                    <div class="border-t-2 border-black"></div>
-                    <a target="_blank" href="https://www.instagram.com/brief.look/" class="block text-gray-700 hover:text-gray-900">Instagram</a>
-                    <a target="_blank" href="https://bsky.app/profile/anugerah.bsky.social" class="block text-gray-700 hover:text-gray-900">Bluesky</a>
-                    <a target="_blank" href="https://www.linkedin.com/in/anugerah-maulana/" class="block text-gray-700 hover:text-gray-900">Linkedin</a>
-                </div>
-            </div>
-        </nav>
-
-
-
-        <div class="container grid columns-4 max-w-full p-10 sm:p-20 lg:p-40 md:p-40 xl:p-40 border-y-2 border-black mt-10 text-justify justify-center">
-                <h1 class="col-span-4 text-4xl xl:text-5xl font-black">Anugerah.</h1>
-                <h1 class="col-span-3 text-sm xl:text-2xl mt-5 xl:w-50 w-full">Passionate <b>graphic designer</b> and <b>video editor</b> with 7+ years of experience creating visually compelling content that drives engagement. Specializing in blending personal creativity with brand goals, I craft unique designs and videos that resonate with audiences—from Instagram posters to videos with 8,000+ views.
-
-                    I thrive on turning ideas into impactful visuals and writing engaging content that helps brands stand out. Currently seeking opportunities to bring my creativity, precision, and fresh perspective to industries that value individuality and innovation.</h1>
         </div>
-
-        <div class="container flex max-w-full h-full sm:p-20 md:p-20 lg:p-20 xl:p-20">
-            <div class="columns-1 md:columns-2 lg:columns-3 gap-4 space-y-4 font-mono text-gray-700">
-                <!-- Item 1 -->
-                <div class="break-inside-avoid p-6">
-                    <img src="img/Cafe_01.png" alt="" srcset="">
-                    <p class="text-center text-md">Poster for a cafe    </p>
-                </div>
-                <div class="break-inside-avoid p-6">
-                    <img src="img/findyourway.png" alt="" srcset="">
-                    <p class="text-center text-md">Surreal poster</p>
-                </div>
-                <div class="break-inside-avoid p-6">
-                    <img src="img/bruh_02.png" alt="" srcset="">
-                    <p class="text-center text-md">Ligne-claire-esque illustration</p>
-                </div>
-                <div class="break-inside-avoid p-6">
-                    <img src="img/shortdeath_01.png" alt="" srcset="">
-                    <p class="text-center text-md">A book cover design</p>
-                </div>
-                <div class="break-inside-avoid p-6">
-                    <img src="img/Grotesque.png" alt="" srcset="">
-                    <p class="text-center text-md">Horror & grotesque illustration</p>
-                </div>
-                <div class="break-inside-avoid p-6">
-                    <img src="img/abstract.png" alt="" srcset="">
-                    <p class="text-center text-md">Abstract poster</p>
-                </div>
-                <div class="break-inside-avoid p-6">
-                    <img src="img/Circle_01.png" alt="" srcset="">
-                    <p class="text-center text-md">Poster for Harat Inggris' community event</p>
-                </div>
-                <div class="break-inside-avoid p-6">
-                    <img src="img/Circle_03.png" alt="" srcset="">
-                    <p class="text-center text-md">Poster for Harat Inggris' community event</p>
-                </div>
-                <div class="break-inside-avoid p-6">
-                    <img src="img/Concern_01.png" alt="" srcset="">
-                    <p class="text-center text-md">Radical fashion design statement</p>
-                </div>
-                <div class="break-inside-avoid p-6">
-                    <img src="img/libre_01.png" alt="" srcset="">
-                    <p class="text-center text-md">Wrestling (libre) poster</p>
-                </div>
-                <div class="break-inside-avoid p-6">
-                    <img src="img/Latihan191_4.png" alt="" srcset="">
-                    <p class="text-center text-md">Minimal & modern poster</p>
-                </div>
-                <div class="break-inside-avoid p-6">
-                    <img src="img/keepinwatch.png" alt="" srcset="">
-                    <p class="text-center text-md">Fan-made poster of an artist</p>
-                </div>
-                <div class="break-inside-avoid p-6">
-                    <img src="img/Plastic_Cup_Mockupsforfree.png" alt="" srcset="">
-                    <p class="text-center text-md">Plastic cup product design for a brand</p>
-                </div>
-                <div class="break-inside-avoid p-6">
-                    <img src="img/Artboard 2.png" alt="" srcset="">
-                    <p class="text-center text-md">Plastic bottle product design for a brand</p>
-                </div>
-                <div class="break-inside-avoid p-6">
-                    <img src="img/Logo_01 copy.png" alt="" srcset="">
-                    <p class="text-center text-md">Brand logo</p>
-                </div>
-            
+        <div class="flex w-full flex-row-reverse gap-4 md:w-3xl lg:w-4xl xl:w-4xl pr-10 mx-auto animate-zoom-in">
+            <div class="tooltip" data-tip="Download Resume">
+                <a href="src/CV - Anugerah_3.pdf"><svg xmlns="http://www.w3.org/2000/svg" class="w-5" viewBox="0 0 512 512"><!--!Font Awesome Free 6.7.2 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free Copyright 2025 Fonticons, Inc.--><path d="M0 64C0 28.7 28.7 0 64 0L224 0l0 128c0 17.7 14.3 32 32 32l128 0 0 144-208 0c-35.3 0-64 28.7-64 64l0 144-48 0c-35.3 0-64-28.7-64-64L0 64zm384 64l-128 0L256 0 384 128zM176 352l32 0c30.9 0 56 25.1 56 56s-25.1 56-56 56l-16 0 0 32c0 8.8-7.2 16-16 16s-16-7.2-16-16l0-48 0-80c0-8.8 7.2-16 16-16zm32 80c13.3 0 24-10.7 24-24s-10.7-24-24-24l-16 0 0 48 16 0zm96-80l32 0c26.5 0 48 21.5 48 48l0 64c0 26.5-21.5 48-48 48l-32 0c-8.8 0-16-7.2-16-16l0-128c0-8.8 7.2-16 16-16zm32 128c8.8 0 16-7.2 16-16l0-64c0-8.8-7.2-16-16-16l-16 0 0 96 16 0zm80-112c0-8.8 7.2-16 16-16l48 0c8.8 0 16 7.2 16 16s-7.2 16-16 16l-32 0 0 32 32 0c8.8 0 16 7.2 16 16s-7.2 16-16 16l-32 0 0 48c0 8.8-7.2 16-16 16s-16-7.2-16-16l0-64 0-64z"/></svg></a>
             </div>
-           
+            <div class="tooltip" data-tip="Dribbble">
+                <a href="https://dribbble.com/Nugehood" target="_blank"><svg xmlns="http://www.w3.org/2000/svg" class="w-5" viewBox="0 0 448 512"><!--!Font Awesome Free 6.7.2 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free Copyright 2025 Fonticons, Inc.--><path d="M165.9 132.5c-38.3 18-66.8 53.3-75.7 95.7c6.1 .1 62.4 .3 126.4-16.7c-22.7-40.2-47.1-74.1-50.7-79zm26.1-9.1c3.8 5.1 28.6 38.9 51 80c48.6-18.3 69.1-45.9 71.6-49.4C281 124.2 235.3 112.9 192 123.4zM277.4 382c-2-12-10-53.8-29.2-103.6c-55.1 18.8-93.8 56.4-108.1 85.6c40.5 31.6 93.3 36.7 137.3 18zM227.8 232.6C159.6 253 93.4 252.2 87.4 252c0 .7 0 1.4 0 2.1s0 1.4 0 2.1c0 35.1 13.3 67.1 35.1 91.4c22.2-37.9 67.1-77.9 116.5-91.8c-3.4-7.8-7.2-15.5-11.1-23.2zm72.5 136.9c30.7-20.7 52.5-53.6 58.6-91.6c-4.6-1.5-42.3-12.7-85.1-5.8c17.9 49.1 25.1 89.1 26.5 97.4zm-34.8-119c45.5-5.7 90.7 3.4 95.2 4.4c-.3-32.3-11.8-61.9-30.9-85.1c-2.9 3.9-25.8 33.2-76.3 53.9c4.8 9.8 8.3 17.8 12 26.8zM384 32H64C28.7 32 0 60.7 0 96V416c0 35.3 28.7 64 64 64H384c35.3 0 64-28.7 64-64V96c0-35.3-28.7-64-64-64zM224 416a160 160 0 1 1 0-320 160 160 0 1 1 0 320z"/></svg></a>
+            </div>
+            <div class="tooltip" data-tip="LinkedIn">
+                <a href="https://www.linkedin.com/in/anugerah-maulana/" target="_blank"><svg xmlns="http://www.w3.org/2000/svg" class="w-5" viewBox="0 0 448 512"><!--!Font Awesome Free 6.7.2 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free Copyright 2025 Fonticons, Inc.--><path d="M416 32H31.9C14.3 32 0 46.5 0 64.3v383.4C0 465.5 14.3 480 31.9 480H416c17.6 0 32-14.5 32-32.3V64.3c0-17.8-14.4-32.3-32-32.3zM135.4 416H69V202.2h66.5V416zm-33.2-243c-21.3 0-38.5-17.3-38.5-38.5S80.9 96 102.2 96c21.2 0 38.5 17.3 38.5 38.5 0 21.3-17.2 38.5-38.5 38.5zm282.1 243h-66.4V312c0-24.8-.5-56.7-34.5-56.7-34.6 0-39.9 27-39.9 54.9V416h-66.4V202.2h63.7v29.2h.9c8.9-16.8 30.6-34.5 62.9-34.5 67.2 0 79.7 44.3 79.7 101.9V416z"/></svg></a>
+            </div>
+            <div class="animate-fade-in-right border-0 border-t-4 border-dotted w-43 mt-2"></div>
         </div>
         
-    
+          <div class="border-0 border-t-4 border-dotted min-w-full mt-15 mx-auto"></div>
 
-        <footer class="flex justify-center text-center font-mono mb-5 italic">
-            Copyright &#169 2025-3069 Anugerah - All Rights Reserved.
-        </footer>
-        
-        <!-- JavaScript for Burger Menu -->
-        <script>
-            const burgerButton = document.getElementById('burger-button');
-            const mobileMenu = document.getElementById('mobile-menu');
-    
-            burgerButton.addEventListener('click', () => {
-                mobileMenu.classList.toggle('hidden');
-            });
-        </script>
-      
+          
+          <div class="grid grid-cols-2 p-10 gap-10 place-items-center">
+              <h1 class="text-center lg:text-start col-span-2 lg:col-span-1 text-3xl lg:text-5xl"><b>Anugerah</b> is ready to make:</h1>
+              <div class="col-span-2 snap-y snap-mandatory lg:col-span-1 carousel carousel-vertical rounded-box h-30 lg:h-96 min-w-full place-items-center">
+              <div class="carousel-slide carousel-item h-full place-items-center snap-center" data-carousel-item> 
+                <h1 class="text-6xl lg:text-8xl font-black">Posters</h1>
+                <div style="animation-iteration-count: infinite;" class="italic animate-vertical-bounce rotate-6 text-xs lg:text-lg">Scroll me!</div>
+              </div>
+              <div class="carousel-slide carousel-item h-full place-items-center snap-center">
+                <h1 class="text-6xl lg:text-8xl font-black">Logo</h1>
+              </div>
+              <div class="carousel-item h-full place-items-center snap-center">
+                <h1 class="text-6xl lg:text-8xl font-black">Feeds</h1>
+              </div>
+              <div class="carousel-item h-full place-items-center snap-center">
+                <h1 class="text-6xl lg:text-8xl font-black">Websites</h1>
+              </div>
+              <div class="carousel-item h-full place-items-center snap-center">
+                <h1 class="text-6xl lg:text-8xl font-black">Videos</h1>
+              </div>
+            </div>
+          </div>
+          
+          
+
+<div class="grid grid-cols-2 md:grid-cols-4 gap-4 p-3">
+  <div class="grid gap-4">
+      <div>
+          <img class="h-auto rounded-lg hover:scale-120 hover:shadow-xl duration-200" src="img/design_01.webp" alt="">
+      </div>
+      <div>
+          <img class="h-auto max-w-full rounded-lg hover:scale-120 hover:shadow-xl duration-200" src="img/design_03.webp" alt="">
+      </div>
+      <div>
+          <img class="h-auto max-w-full rounded-lg hover:scale-120 hover:shadow-xl duration-200" src="img/poster_01.webp" alt="">
+      </div>
+  </div>
+  <div class="grid gap-4">
+      <div>
+          <img class="h-auto max-w-full rounded-lg hover:scale-120 hover:shadow-xl duration-200" src="img/design_02.webp" alt="">
+      </div>
+      <div>
+          <img class="h-auto max-w-full rounded-lg hover:scale-120 hover:shadow-xl duration-200" src="img/design_05.webp" alt="">
+      </div>
+      <div>
+          <img class="h-auto max-w-full rounded-lg hover:scale-120 hover:shadow-xl duration-200" src="img/Rose_01.webp" alt="">
+      </div>
+  </div>
+  <div class="grid gap-4">
+      <div>
+          <img class="h-auto max-w-full rounded-lg hover:scale-120 hover:shadow-xl duration-200" src="img/bag_01.webp" alt="">
+      </div>
+      <div>
+          <img class="h-auto max-w-full rounded-lg hover:scale-120 hover:shadow-xl duration-200" src="img/design_04.webp" alt="">
+      </div>
+      <div>
+          <img class="h-auto max-w-full rounded-lg hover:scale-120 hover:shadow-xl duration-200" src="img/libre_01.webp" alt="">
+      </div>
+  </div>
+  <div class="grid gap-4">
+      <div>
+          <img class="h-auto max-w-full rounded-lg hover:scale-120 hover:shadow-xl duration-200" src="img/design_06.webp" alt="">
+      </div>
+      <div>
+          <img class="h-auto max-w-full rounded-lg hover:scale-120 hover:shadow-xl duration-200" src="img/web_03.webp" alt="">
+      </div>
+      <div>
+          <img class="h-auto max-w-full rounded-lg hover:scale-120 hover:shadow-xl duration-200" src="img/lanyard_02.webp" alt="">
+      </div>
+  </div>
+</div>
+
+
+
+<footer class="footer gap-5 md:flex md:justify-between flex-row place-items-center mx-auto p-10 min-w-full h-full grow">
+  <img class="w-25 lg:w-40" src="img/wewus.webp" alt="">
+  <div class="tooltip">
+    <div class="tooltip-content">
+      <div class="text-2xl">Let's work together!</div>
+    </div>
+    <a class="link text-xl font-bold" href="mailto:nugehood@proton.me"><img class="lg:w-40 w-25 hover:rotate-6 duration-300" src="img/contact_01.webp" alt="" srcset=""></a>
+  </div>
+  <a href="https://notbyai.fyi/" target="_blank"> <img class="justify-self-end w-25 lg:w-40 hover:animate-tada" src="img/by_human.png" alt=""></a>
+</footer>
+
+
 </body>
 </html>
