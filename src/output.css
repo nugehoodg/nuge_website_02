@@ -4,6 +4,8 @@
   :root, :host {
     --font-mono: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono",
       "Courier New", monospace;
+    --color-red-200: oklch(0.885 0.062 18.334);
+    --color-red-500: oklch(0.637 0.237 25.331);
     --color-orange-50: oklch(0.98 0.016 73.684);
     --color-orange-100: oklch(0.954 0.038 75.164);
     --color-gray-700: oklch(0.373 0.034 259.733);
@@ -911,9 +913,6 @@
       }
     }
   }
-  .fixed {
-    position: fixed;
-  }
   .textarea {
     border: var(--border) solid #0000;
     min-height: calc(0.25rem * 20);
@@ -963,6 +962,11 @@
     &:has(> textarea[disabled]) > textarea[disabled] {
       cursor: not-allowed;
     }
+  }
+  .btn-active {
+    --btn-bg: color-mix(in oklab, var(--btn-color, var(--color-base-200)), #000 7%);
+    --btn-shadow: 0 0 0 0 oklch(0% 0 0/0), 0 0 0 0 oklch(0% 0 0/0);
+    isolation: isolate;
   }
   .col-span-1 {
     grid-column: span 1 / span 1;
@@ -1156,6 +1160,12 @@
   .table {
     display: table;
   }
+  .btn-circle {
+    border-radius: calc(infinity * 1px);
+    padding-inline: calc(0.25rem * 0);
+    width: var(--size);
+    height: var(--size);
+  }
   .size-7 {
     width: calc(var(--spacing) * 7);
     height: calc(var(--spacing) * 7);
@@ -1182,6 +1192,15 @@
   .min-h-full {
     min-height: 100%;
   }
+  .w-2 {
+    width: calc(var(--spacing) * 2);
+  }
+  .w-3 {
+    width: calc(var(--spacing) * 3);
+  }
+  .w-4 {
+    width: calc(var(--spacing) * 4);
+  }
   .w-5 {
     width: calc(var(--spacing) * 5);
   }
@@ -1200,11 +1219,23 @@
   .w-full {
     width: 100%;
   }
+  .w-screen {
+    width: 100vw;
+  }
   .max-w-full {
     max-width: 100%;
   }
+  .max-w-screen {
+    max-width: 100vw;
+  }
+  .min-w-fit {
+    min-width: fit-content;
+  }
   .min-w-full {
     min-width: 100%;
+  }
+  .min-w-screen {
+    min-width: 100vw;
   }
   .flex-shrink {
     flex-shrink: 1;
@@ -1272,9 +1303,6 @@
     --motion-rotate-out-animation: motion-rotate-out calc(var(--motion-rotate-duration) * var(--motion-rotate-perceptual-duration-multiplier)) var(--motion-rotate-timing) var(--motion-rotate-delay) both;
     animation: var(--motion-all-exit-animations);
   }
-  .animate-blurred-fade-in {
-    animation: blurred-fade-in 0.9s ease-in-out both;
-  }
   .animate-fade-in-down {
     animation: fade-in-down 0.6s ease-in-out both;
   }
@@ -1286,9 +1314,6 @@
   }
   .animate-jelly {
     animation: jelly 1s ease-out forwards;
-  }
-  .animate-slide-in-top {
-    animation: slide-in-top 0.6s ease-out both;
   }
   .animate-vertical-bounce {
     animation: vertical-bounce 0.6s ease-in-out both;
@@ -1437,8 +1462,11 @@
   .bg-orange-100 {
     background-color: var(--color-orange-100);
   }
-  .p-2 {
-    padding: calc(var(--spacing) * 2);
+  .bg-red-200 {
+    background-color: var(--color-red-200);
+  }
+  .bg-red-500 {
+    background-color: var(--color-red-500);
   }
   .p-3 {
     padding: calc(var(--spacing) * 3);
@@ -1611,6 +1639,66 @@
       line-height: var(--tw-leading, var(--text-3xl--line-height));
     }
   }
+  .md\:tooltip {
+    @media (width >= 48rem) {
+      position: relative;
+      display: inline-block;
+      --tt-bg: var(--color-neutral);
+      --tt-off: calc(100% + 0.5rem);
+      --tt-tail: calc(100% + 1px + 0.25rem);
+      > :where(.tooltip-content), &[data-tip]:before {
+        position: absolute;
+        max-width: 20rem;
+        border-radius: var(--radius-field);
+        padding-inline: calc(0.25rem * 2);
+        padding-block: calc(0.25rem * 1);
+        text-align: center;
+        white-space: normal;
+        color: var(--color-neutral-content);
+        opacity: 0%;
+        font-size: 0.875rem;
+        line-height: 1.25em;
+        transition: opacity 0.2s cubic-bezier(0.4, 0, 0.2, 1) 75ms, transform 0.2s cubic-bezier(0.4, 0, 0.2, 1) 75ms;
+        background-color: var(--tt-bg);
+        width: max-content;
+        pointer-events: none;
+        z-index: 1;
+        --tw-content: attr(data-tip);
+        content: var(--tw-content);
+      }
+      &:after {
+        position: absolute;
+        position: absolute;
+        opacity: 0%;
+        background-color: var(--tt-bg);
+        transition: opacity 0.2s cubic-bezier(0.4, 0, 0.2, 1) 75ms, transform 0.2s cubic-bezier(0.4, 0, 0.2, 1) 75ms;
+        content: "";
+        pointer-events: none;
+        width: 0.625rem;
+        height: 0.25rem;
+        display: block;
+        mask-repeat: no-repeat;
+        mask-position: -1px 0;
+        --mask-tooltip: url("data:image/svg+xml,%3Csvg width='10' height='4' viewBox='0 0 8 4' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M0.500009 1C3.5 1 3.00001 4 5.00001 4C7 4 6.5 1 9.5 1C10 1 10 0.499897 10 0H0C-1.99338e-08 0.5 0 1 0.500009 1Z' fill='black'/%3E%3C/svg%3E%0A");
+        mask-image: var(--mask-tooltip);
+      }
+      &.tooltip-open, &[data-tip]:hover, &:hover, &:has(:focus-visible) {
+        > .tooltip-content, &[data-tip]:before, &:after {
+          opacity: 100%;
+          --tt-pos: 0rem;
+          transition: opacity 0.2s cubic-bezier(0.4, 0, 0.2, 1) 0s, transform 0.2s cubic-bezier(0.4, 0, 0.2, 1) 0ms;
+        }
+      }
+      > .tooltip-content, &[data-tip]:before {
+        transform: translateX(-50%) translateY(var(--tt-pos, 0.25rem));
+        inset: auto auto var(--tt-off) 50%;
+      }
+      &:after {
+        transform: translateX(-50%) translateY(var(--tt-pos, 0.25rem));
+        inset: auto auto var(--tt-tail) 50%;
+      }
+    }
+  }
   .md\:col-span-2 {
     @media (width >= 48rem) {
       grid-column: span 2 / span 2;
@@ -1634,6 +1722,11 @@
   .md\:w-3xl {
     @media (width >= 48rem) {
       width: var(--container-3xl);
+    }
+  }
+  .md\:w-5 {
+    @media (width >= 48rem) {
+      width: calc(var(--spacing) * 5);
     }
   }
   .md\:grid-cols-2 {
@@ -2468,14 +2561,6 @@
   inherits: false;
   initial-value: 0 0 #0000;
 }
-@keyframes slide-in-top {
-  0% {
-    transform: translateY(-20px);
-  }
-  100% {
-    transform: translateY(0);
-  }
-}
 @keyframes zoom-in {
   0% {
     opacity: 0;
@@ -2549,16 +2634,6 @@
   100% {
     opacity: 1;
     transform: translateX(0);
-  }
-}
-@keyframes blurred-fade-in {
-  0% {
-    filter: blur(5px);
-    opacity: 0;
-  }
-  100% {
-    filter: blur(0);
-    opacity: 1;
   }
 }
 @keyframes vertical-bounce {
