@@ -27,21 +27,13 @@
             </div>
             <div class="border-0 border-t-2 w-full mt-2"></div>
             <div class="flex flex-wrap gap-3 md:gap-5 col-span-2">
-              <a
-  href="https://www.last.fm/user/nugehood"
-  target="_blank"
-  rel="noopener noreferrer"
-  class="inline-block"
->
-  <img
-    src="https://img.shields.io/endpoint?url=https://anugerah.vercel.app/api/now-playing"
-    alt="Now Playing on Last.fm"
-    class="h-6"
-  />
-</a>
-
               <div class="font-bold italic text-xs md:text-sm badge badge-warning badge-xl md:badge-md">Currently working on a game</div>
-              <div class="font-bold italic text-xs md:text-sm badge badge-success badge-xl md:badge-md">Currently listening to Terra </div>
+              <div
+  id="now-playing-badge"
+  class="font-bold italic text-xs md:text-sm badge badge-warning badge-xl md:badge-md"
+>
+  Loading...
+</div>
             </div>
       </div>
           
@@ -156,6 +148,32 @@
   <a href="https://notbyai.fyi/" target="_blank"> <img class="justify-self-end w-25 lg:w-40 hover:animate-tada" src="img/by_human.png" alt=""></a>
 </footer>
 
+<script>
+  async function fetchNowPlaying() {
+    try {
+      const res = await fetch('/api/now-playing');
+      if (!res.ok) throw new Error('Failed to fetch');
+
+      const data = await res.json();
+      const badge = document.getElementById('now-playing-badge');
+
+      if (data.message && data.message !== 'Nothing playing') {
+        badge.textContent = data.message;
+      } else {
+        badge.textContent = 'Not playing';
+      }
+    } catch (err) {
+      const badge = document.getElementById('now-playing-badge');
+      badge.textContent = 'Error loading';
+      console.error(err);
+    }
+  }
+
+  fetchNowPlaying();
+
+  // Optional: refresh every 15 seconds
+  setInterval(fetchNowPlaying, 15000);
+</script>
 
 </body>
 </html>
