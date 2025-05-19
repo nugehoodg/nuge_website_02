@@ -1,5 +1,4 @@
 // pages/api/now-playing.js
-import fetch from 'node-fetch';
 
 const API_KEY = process.env.LASTFM_API_KEY;
 const USERNAME = 'nugehood';
@@ -17,15 +16,17 @@ export default async function handler(req, res) {
       `&api_key=${API_KEY}` +
       `&format=json&limit=1`;
 
+    // Use the built-in fetch
     const response = await fetch(url);
+
     if (!response.ok) {
       throw new Error(`Last.fm API responded ${response.status}`);
     }
 
     const data = await response.json();
     const track = data.recenttracks?.track?.[0];
-    let message = 'Nothing playing';
 
+    let message = 'Nothing playing';
     if (track && track['@attr']?.nowplaying === 'true') {
       message = `${track.name} – ${track.artist['#text']}`;
     }
@@ -37,9 +38,7 @@ export default async function handler(req, res) {
       message
     });
   } catch (err) {
-    console.error('🔴 /api/now-playing error:', err);
-    res.status(500).json({
-      error: err.message
-    });
+    console.error('🛑 /api/now-playing error:', err);
+    res.status(500).json({ error: err.message });
   }
 }
