@@ -159,9 +159,9 @@
       const badge = document.getElementById('now-playing-badge');
 
       if (data.message && data.message !== 'Nothing playing') {
-        badge.textContent = 'Now playing: ' + data.message;
+        badge.textContent = 'Now listening to: ' + data.message;
       } else {
-        badge.textContent = 'Not playing';
+        badge.textContent = 'Not listening';
       }
     } catch (err) {
       const badge = document.getElementById('now-playing-badge');
