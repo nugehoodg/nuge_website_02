@@ -27,13 +27,14 @@
             </div>
             <div class="border-0 border-t-2 w-full mt-2"></div>
             <div class="flex flex-wrap gap-3 md:gap-5 col-span-2">
-              <div class="font-bold italic text-xs md:text-sm badge badge-warning badge-xl md:badge-md">Currently working on a game</div>
-              <div
-  id="now-playing-badge"
-  class="font-bold italic text-xs md:text-sm badge badge-warning badge-xl md:badge-md"
->
-  Loading...
-</div>
+              <div class="join">
+                <div class="join-item font-bold text-xs md:text-sm badge badge-neutral badge-xl md:badge-md">💻</div>
+                <div class="join-item font-bold italic text-xs md:text-sm badge badge-warning badge-xl md:badge-md">Now Working on a Game</div>
+              </div>
+              <div class="join">
+                <div class="join-item font-bold text-xs md:text-sm badge badge-neutral badge-xl md:badge-md">🎧</div>
+                <div id="now-playing-badge"  class="join-item font-bold italic text-xs md:text-sm badge badge-success badge-xl md:badge-md">Now Listening to</div>
+              </div>
             </div>
       </div>
           
@@ -158,7 +159,7 @@
       const badge = document.getElementById('now-playing-badge');
 
       if (data.message && data.message !== 'Nothing playing') {
-        badge.textContent = data.message;
+        badge.textContent = 'Now playing: ' + data.message;
       } else {
         badge.textContent = 'Not playing';
       }
